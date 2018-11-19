@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BlockChainAPI", "src\BlockChainAPI\BlockChainAPI.xproj", "{35C531EB-4EBE-4496-BDF9-2FE244D6E265}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Prueba", "src\Prueba\Prueba.xproj", "{EE43AB9A-829F-4FE5-91B4-DD3DBE9A5627}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,16 +22,11 @@ Global
 		{35C531EB-4EBE-4496-BDF9-2FE244D6E265}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35C531EB-4EBE-4496-BDF9-2FE244D6E265}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35C531EB-4EBE-4496-BDF9-2FE244D6E265}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE43AB9A-829F-4FE5-91B4-DD3DBE9A5627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE43AB9A-829F-4FE5-91B4-DD3DBE9A5627}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE43AB9A-829F-4FE5-91B4-DD3DBE9A5627}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE43AB9A-829F-4FE5-91B4-DD3DBE9A5627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{35C531EB-4EBE-4496-BDF9-2FE244D6E265} = {61744924-8F0D-47C3-A63C-79B941459F14}
-		{EE43AB9A-829F-4FE5-91B4-DD3DBE9A5627} = {61744924-8F0D-47C3-A63C-79B941459F14}
 	EndGlobalSection
 EndGlobal
