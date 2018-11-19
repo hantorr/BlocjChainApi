@@ -1,5 +1,5 @@
---temp-output:D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\
---out:D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\bin\Debug\netcoreapp1.0\BlockChainAPI.dll
+--temp-output:D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\
+--out:D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\bin\Debug\netcoreapp1.0\BlockChainAPI.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -196,8 +196,9 @@
 --reference:C:\Users\hantorr\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\hantorr\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\hantorr\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\BlockChainAPIdotnet-compile.deps.json",BlockChainAPI.deps.json
-D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Program.cs
-D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Startup.cs
-D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Controllers\HomeController.cs
-D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Model\RegistroModel.cs
+--resource:"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\BlockChainAPIdotnet-compile.deps.json",BlockChainAPI.deps.json
+D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Program.cs
+D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Startup.cs
+D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Controllers\HomeController.cs
+D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Controllers\RegistroController.cs
+D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Model\RegistroModel.cs

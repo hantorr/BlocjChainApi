@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\bin\Debug\netcoreapp1.0\BlockChainAPI.dll"
+"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\bin\Debug\netcoreapp1.0\BlockChainAPI.dll"
 -r:"C:\Users\hantorr\.nuget\packages\Microsoft.ApplicationInsights\2.1.0\lib\dotnet5.4\Microsoft.ApplicationInsights.dll"
 -r:"C:\Users\hantorr\.nuget\packages\Microsoft.ApplicationInsights.AspNetCore\1.0.0\lib\netstandard1.6\Microsoft.ApplicationInsights.AspNetCore.dll"
 -r:"C:\Users\hantorr\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
@@ -192,8 +192,9 @@
 -r:"C:\Users\hantorr\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\hantorr\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\hantorr\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
--resource:"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\BlockChainAPIdotnet-compile.deps.json",BlockChainAPI.deps.json
-"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Program.cs"
-"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Startup.cs"
-"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Controllers\HomeController.cs"
-"D:\Visual Studio 2015\BlockChainAPI\BlockChainAPI\src\BlockChainAPI\Model\RegistroModel.cs"
+-resource:"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\obj\Debug\netcoreapp1.0\BlockChainAPIdotnet-compile.deps.json",BlockChainAPI.deps.json
+"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Program.cs"
+"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Startup.cs"
+"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Controllers\HomeController.cs"
+"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Controllers\RegistroController.cs"
+"D:\Visual Studio 2015\BlockChainAPI\BlocjChainApi\BlockChainAPI\src\BlockChainAPI\Model\RegistroModel.cs"
