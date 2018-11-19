@@ -1,5 +1,12 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{ 
+
+    ViewData["RegistroModel"] = "Index";
+
 }
+
+<h2>Registro</h2>
+<p>Ingreso de registro BC</p>
+<%: Html.ActionLink("Guardar", "actionGuardar") %>
+<%: Html.TextBox("Nombre") %>
+
+
