@@ -76,9 +76,31 @@ namespace APIPersist.Controllers
         }
 
         // DELETE api/<controller>/5
-        public void Delete(int id)
+        public HttpResponseMessage Delete(int id)
         {
+            RegistroET reg = db.Registro.Find(id);
+            if (reg == null)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+            db.Registro.Remove(reg);
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, reg);
 
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
+
     }
 }
