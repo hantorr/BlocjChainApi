@@ -4,9 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="54ec1029f56d498d9705388ae065790a" Name="Diagram1" >
-        <EntityTypeShape EntityType="ModelBCDB.RegistroET" Width="1.5" PointX="2.5" PointY="2" />
-        <EntityTypeShape EntityType="ModelBCDB.Banco" Width="1.5" PointX="4.25" PointY="1.875" />
+      <Diagram DiagramId="a5919db7276a442e98c950b445dbc638" Name="Diagram1" >
+        <EntityTypeShape EntityType="BlockChainModel.Cuentas" Width="1.5" PointX="1" PointY="1.875" />
+        <EntityTypeShape EntityType="BlockChainModel.Transacciones" Width="1.5" PointX="3" PointY="1.875" />
+        <AssociationConnector Association="BlockChainModel.CuentasTransacciones" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

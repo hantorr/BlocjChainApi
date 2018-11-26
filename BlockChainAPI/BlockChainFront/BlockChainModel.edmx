@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BlockChainModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BlockChainModelStoreContainer">
+    <EntitySet Name="Cuentas" EntityType="BlockChainModel.Store.Cuentas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Transacciones" EntityType="BlockChainModel.Store.Transacciones" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CuentasTransacciones" Association="BlockChainModel.Store.CuentasTransacciones">
+      <End Role="Cuentas" EntitySet="Cuentas" />
+      <End Role="Transacciones" EntitySet="Transacciones" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cuentas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Cuenta" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="CuentaBC" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumeroDoc" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transacciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTxBC" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Monto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CuentasId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CuentasTransacciones">
+    <End Role="Cuentas" Type="BlockChainModel.Store.Cuentas" Multiplicity="1" />
+    <End Role="Transacciones" Type="BlockChainModel.Store.Transacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuentas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transacciones">
+        <PropertyRef Name="CuentasId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BlockChainModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="BlockChainModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cuentas" EntityType="BlockChainModel.Cuentas" />
+          <EntitySet Name="Transacciones" EntityType="BlockChainModel.Transacciones" />
+          <AssociationSet Name="CuentasTransacciones" Association="BlockChainModel.CuentasTransacciones">
+            <End Role="Cuentas" EntitySet="Cuentas" />
+            <End Role="Transacciones" EntitySet="Transacciones" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cuentas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="300" />
+          <Property Name="Cuenta" Type="String" Nullable="false" MaxLength="10" />
+          <Property Name="CuentaBC" Type="String" Nullable="false" />
+          <Property Name="NumeroDoc" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Transacciones" Relationship="BlockChainModel.CuentasTransacciones" FromRole="Cuentas" ToRole="Transacciones" />
+        </EntityType>
+        <EntityType Name="Transacciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdTxBC" Type="String" Nullable="false" />
+          <Property Name="Monto" Type="String" Nullable="false" />
+          <NavigationProperty Name="Cuentas" Relationship="BlockChainModel.CuentasTransacciones" FromRole="Transacciones" ToRole="Cuentas" />
+          <Property Name="CuentasId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="CuentasTransacciones">
+          <End Type="BlockChainModel.Cuentas" Role="Cuentas" Multiplicity="1" />
+          <End Type="BlockChainModel.Transacciones" Role="Transacciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuentas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Transacciones">
+              <PropertyRef Name="CuentasId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BlockChainModelStoreContainer" CdmEntityContainer="BlockChainModelContainer">
+    <EntitySetMapping Name="Cuentas">
+      <EntityTypeMapping TypeName="IsTypeOf(BlockChainModel.Cuentas)">
+        <MappingFragment StoreEntitySet="Cuentas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="CuentaBC" ColumnName="CuentaBC" />
+          <ScalarProperty Name="NumeroDoc" ColumnName="NumeroDoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transacciones">
+      <EntityTypeMapping TypeName="IsTypeOf(BlockChainModel.Transacciones)">
+        <MappingFragment StoreEntitySet="Transacciones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdTxBC" ColumnName="IdTxBC" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="CuentasId" ColumnName="CuentasId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
