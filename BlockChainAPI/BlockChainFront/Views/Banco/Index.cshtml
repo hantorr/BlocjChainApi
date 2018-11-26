@@ -1,0 +1,38 @@
+﻿@model BlockChainFront.Models.SaldoModel
+
+@{
+    ViewBag.Title = "banco";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div>
+    <h4>Saldo Banco</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdBC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdBC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Banco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Banco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Saldo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Saldo)
+        </dd>
+
+    </dl>
+</div>
+

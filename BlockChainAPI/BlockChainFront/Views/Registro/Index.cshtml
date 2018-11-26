@@ -10,8 +10,7 @@
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/jqueryval")
 
-
-@using (Html.BeginForm())
+@using (Html.BeginForm("Create", "Registro", FormMethod.Get))
 {
     @Html.AntiForgeryToken()
 
@@ -81,7 +80,3 @@
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
