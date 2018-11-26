@@ -12,14 +12,10 @@ namespace APIPersist
     using System;
     using System.Collections.Generic;
     
-    public partial class RegistroET
+    public partial class Banco
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Email { get; set; }
-        public string Direccion { get; set; }
-        public string Cuenta { get; set; }
-        public string Documento { get; set; }
-        public string AddresBC { get; set; }
+        public string Codigo { get; set; }
+        public string Descripcion { get; set; }
     }
 }

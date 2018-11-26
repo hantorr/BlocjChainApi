@@ -1,28 +1,27 @@
 ﻿@*<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        <h1>ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
-</div>*@
-
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
+            a broad range of clients, including browsers and mobile devices. ASP.NET Web API
+            is an ideal platform for building RESTful applications on the .NET Framework.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+        </div>
+    </div>*@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,8 +33,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/css/toastr.css" />
 <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/js/toastr.js"></script>
 <!--add this link for the datatable-->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />  
-
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
 <style>
     .red_border {
@@ -66,4 +64,237 @@
             </td>
         </tr>
     </table>
-</div> 
+</div>
+<div id="body">
+    <section class="content-wrapper main-content clear-fix">
+        <h3>CRUD Regsitro</h3> Servicio de Api
+        <ol class="round">
+            <li class="one">
+                <h5><a style="cursor: pointer" data-toggle="modal" data-target="#RegistrarTxModel">Generar Transaccion</a></h5> Generar transaccion tipo:POST
+            </li>
+            <li class="two">
+                <h5><a id="GetAllProduct" style="cursor: pointer">Obtener Transacciones</a></h5> this service has no any paramer call this serviec in url like this:<b> api/product</b> in this service ajax call type:GET
+            </li>
+            <li class="three">
+                <h5><a id="GetAllProductbyid" style="cursor: pointer">Obtener transaccion por Id</a></h5> this service has no any paramer call this serviec in url like this:<b> api/product/5</b>
+            </li>
+        </ol>
+    </section>
+</div>
+<!-- Modal add product -->
+<div id="RegistrarTxModel" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Transacción</h4>
+            </div>
+            <div class="modal-body">
+                Cuenta Destino:<input type="text" id="txtCtaDestino" class="form-control required" />
+                Banco :<textarea id="txtBanco" class="form-control required"></textarea>
+                Monto :<input type="text" id="txtMonto" onkeypress="return isNumberKey(event)" class="form-control required" />
+            </div>
+            <div class="modal-footer"> <button type="button" class="btn btn-success" id="btnSave">Save</button> <button type="button" class="btn btn-danger" onclick="clear();" data-dismiss="modal">Close</button> </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Show product Data-->
+<div id="GetData" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Show Product Data</h4>
+            </div>
+            <div class="modal-body">
+                <p id="idjson"></p>
+            </div>
+            <div class="modal-footer"> <a style="float: left; color: #3791cc" href="api/product">click hear to show xml response.</a> <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#toast-container').find('.toast-top-center').removeClass('.toast-top-center');
+        toastr.options = {
+            "closeButton": true,
+            'autoWidth': false,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        $("#btnSave").click(function () {
+            debugger
+            var PID = 0;
+            var Name = $("#txtCtaDestino").val();
+            var Desc = $("#txtBanco").val();
+            var Price = parseFloat($("#txtMonto").val()).toFixed(2);
+
+            if (CheckRequiredFields()) {
+
+                $('#dvLoader').show();
+                $.ajax({
+                    url: '@Url.Action("Product", "Api")',
+                    type: 'POST',
+                    data: JSON.stringify({ "PID": parseInt(PID), "Name": Name, "Description": Desc, "price": Price }),
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (result) {
+
+                        $('#dvLoader').hide();
+                        jQuery.noConflict();
+                        $('#RegistrarTxModel').modal('hide');
+                        toastr.success("TX insert successfull");
+                        clear();
+
+
+                    }
+                });
+
+            }
+
+        });
+        $("#GetAllProduct").click(function () {
+            $.ajax({
+                url: '@Url.Action("Product", "Api")',
+                type: 'GET',
+                // data: JSON.stringify({  }),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    jQuery.noConflict();
+
+                    $("#idjson").text(JSON.stringify(result));
+                    $('#GetData').modal('show');
+
+                }
+            });
+
+        });
+
+        $("#GetAllProductbyid").click(function () {
+
+
+            $.ajax({
+                url: 'api/product/5',
+                type: 'GET',
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+
+                    jQuery.noConflict();
+                    $("#idjsonbyid").text(JSON.stringify(result));
+                    $('#GetDatabyid').modal('show');
+
+                }
+            });
+
+        });
+
+        $("#btnUpdate").click(function () {
+            var PID = 5;
+            var Name = $("#txtName2").val();
+            var Desc = $("#txtDesc2").val();
+            var Price = parseFloat($("#txtPrice2").val()).toFixed(2);
+
+            $('#dvLoader').show();
+            $.ajax({
+                url: 'api/product/5',
+                type: 'PUT',
+                data: JSON.stringify({ "PID": parseInt(PID), "Name": Name, "Description": Desc, "price": Price }),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    $('#dvLoader').hide();
+
+                    $('#UpdateProduct_Model').modal('hide');
+
+                    toastr.success("product updated successfully.");
+                    clear2();
+
+
+                }
+            });
+
+
+
+        });
+        $("#DeleteProduct").click(function () {
+
+            $.ajax({
+                url: 'api/product/5',
+                method: 'DELETE',
+                contentType: 'application/json',
+                success: function (result) {
+                    toastr.success("product Deleted successfull");
+                },
+                error: function (request, msg, error) {
+                    // handle failure
+                }
+            });
+
+
+
+        });
+    });
+    function CheckRequiredFields() {
+        var isValid = true;
+        $('.required').each(function () {
+            if ($.trim($(this).val()) == '') {
+                isValid = false;
+                $(this).addClass('red_border');
+
+
+            }
+            else {
+                $(this).removeClass('red_border');
+
+            }
+        });
+        return isValid;
+    }
+    function clear() {
+        $("#txtName").val("");
+        $("#txtDesc").val("");
+        $("#txtPrice").val("");
+
+
+    }
+    function clear2() {
+        $("#txtName2").val("");
+        $("#txtDesc2").val("");
+        $("#txtPrice2").val("");
+
+
+    }
+    function isNumberKey(evt) {
+        var charcode = (evt.which) ? evt.which : evt.keycode
+        if (charcode > 31 && (charcode < 48 || charcode > 58)
+            && evt.keyCode != 35 && evt.keyCode != 36 && evt.keyCode != 37
+            && evt.keyCode != 38 && evt.keyCode != 39 && evt.keyCode != 40
+            && evt.keyCode != 46) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>

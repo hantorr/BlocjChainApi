@@ -26,5 +26,6 @@ namespace APIPersist
         }
     
         public DbSet<RegistroET> Registro { get; set; }
+        public DbSet<Banco> BancoSet { get; set; }
     }
 }

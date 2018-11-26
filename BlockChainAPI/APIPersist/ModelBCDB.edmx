@@ -25,6 +25,7 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelBCDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="ModelBCDBContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Registro" EntityType="ModelBCDB.RegistroET" />
+          <EntitySet Name="BancoSet" EntityType="ModelBCDB.Banco" />
         </EntityContainer>
         <EntityType Name="RegistroET">
           <Key>
@@ -36,6 +37,15 @@
           <Property Name="Direccion" Type="String" Nullable="true" MaxLength="250" />
           <Property Name="Cuenta" Type="String" Nullable="false" MaxLength="14" />
           <Property Name="Documento" Type="String" Nullable="false" MaxLength="14" />
+          <Property Name="AddresBC" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Banco">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="10" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="255" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
