@@ -14,11 +14,7 @@ namespace ConexionBC
         {
             var ipAddress = DefaultSettings.QuorumIPAddress;
             var node1Port = "22000";
-            var node2Port = "22001";
-            var node7Port = "22006";
             var urlNode1 = ipAddress + ":" + node1Port;
-            var urlNode2 = ipAddress + ":" + node2Port;
-            var urlNode7 = ipAddress + ":" + node7Port;
 
             var address = "0x1932c48b2bf8102ba33b4a6b545c32236e342f34";
             var abi = "[{ 'constant':true,'inputs':[],'name':'storedData','outputs':[{'name':'','type':'uint256'}],'payable':false,'type':'function'},{'constant':false,'inputs':[{'name':'x','type':'uint256'}],'name':'set','outputs':[],'payable':false,'type':'function'},{'constant':true,'inputs':[],'name':'get','outputs':[{'name':'retVal','type':'uint256'}],'payable':false,'type':'function'},{'inputs':[{'name':'initVal','type':'uint256'}],'type':'constructor'}]";
@@ -38,18 +34,12 @@ namespace ConexionBC
 
             var node1Value = await GetValue(abi, address, urlNode1);
            
-            var node2Value = await GetValue(abi, address, urlNode2);
-
-            var node7Value = await GetValue(abi, address, urlNode7);
 
             txnHash = await transactionService.SendRequestAndWaitForReceiptAsync(() => functionSet.SendTransactionAsync(account, 42));
 
             //node1
             node1Value = await GetValue(abi, address, urlNode1);
 
-            node2Value = await GetValue(abi, address, urlNode2);
-           
-            node7Value = await GetValue(abi, address, urlNode7);
 
             //private.set(4,{from:eth.coinbase,privateFor:["ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc="]});
         }
