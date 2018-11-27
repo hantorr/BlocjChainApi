@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockChainFront", "BlockChainFront\BlockChainFront.csproj", "{BF1D6620-493C-4D69-AE21-D471E9387050}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConexionBC", "ConexionBC\ConexionBC.csproj", "{9DECBF72-296B-48BB-AA19-D714A6570372}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,12 +26,17 @@ Global
 		{BF1D6620-493C-4D69-AE21-D471E9387050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF1D6620-493C-4D69-AE21-D471E9387050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF1D6620-493C-4D69-AE21-D471E9387050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DECBF72-296B-48BB-AA19-D714A6570372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DECBF72-296B-48BB-AA19-D714A6570372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DECBF72-296B-48BB-AA19-D714A6570372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DECBF72-296B-48BB-AA19-D714A6570372}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BF1D6620-493C-4D69-AE21-D471E9387050} = {61744924-8F0D-47C3-A63C-79B941459F14}
+		{9DECBF72-296B-48BB-AA19-D714A6570372} = {61744924-8F0D-47C3-A63C-79B941459F14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81A08440-9115-40E2-ABFD-7026C10053A0}
