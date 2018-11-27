@@ -7,12 +7,10 @@ namespace BlockChainFront.Models
 {
     public class RegistroModel
     {
-        public string Identificacion { get; set; }
-        public string TipoIdentificacion { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
+        public long Id { get; set; }
+        public string NumeroDoc { get; set; }
+        public string Nombre { get; set; }
         public string Cuenta { get; set; }
-        public string Direccion { get; set; }
-        public long IdTransaccion { get; set; }
+        public string CuentaBC { get; set; }
     }
 }
