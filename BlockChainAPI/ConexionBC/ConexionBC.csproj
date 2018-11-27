@@ -101,8 +101,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiMethods.cs" />
+    <Compile Include="BlockMakeStratregy.cs" />
     <Compile Include="ConexionBC.cs" />
+    <Compile Include="NodeInfo.cs" />
+    <Compile Include="PrivateForInterceptor.cs" />
+    <Compile Include="PrivateTransactionInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuorumCanonicalHash.cs" />
+    <Compile Include="QuorumChainService.cs" />
+    <Compile Include="QuorumIsBlockMaker.cs" />
+    <Compile Include="QuorumIsVoter.cs" />
+    <Compile Include="QuorumMakeBlock.cs" />
+    <Compile Include="QuorumNodeInfo.cs" />
+    <Compile Include="QuorumPauseBlockMaker.cs" />
+    <Compile Include="QuorumResumeBlockMaker.cs" />
+    <Compile Include="QuorumVote.cs" />
+    <Compile Include="Web3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
