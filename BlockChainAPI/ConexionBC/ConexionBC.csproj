@@ -119,7 +119,6 @@
     <Compile Include="QuorumPrivateContractTests.cs" />
     <Compile Include="QuorumResumeBlockMaker.cs" />
     <Compile Include="QuorumVote.cs" />
-    <Compile Include="Web3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

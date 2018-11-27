@@ -1,15 +1,15 @@
-﻿using Common.Logging;
-using Nethereum.JsonRpc.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
+using Common.Logging;
+using Nethereum.JsonRpc.Client;
+using Nethereum.Web3;
 
 namespace ConexionBC
 {
-    public class ConexionBC:Web3
+    public class ConexionBC: Web3
     {
         public ConexionBC(IClient client) : base(client)
         {
