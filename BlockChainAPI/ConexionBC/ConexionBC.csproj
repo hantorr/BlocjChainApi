@@ -104,6 +104,7 @@
     <Compile Include="ApiMethods.cs" />
     <Compile Include="BlockMakeStratregy.cs" />
     <Compile Include="ConexionBC.cs" />
+    <Compile Include="DefaultSettings.cs" />
     <Compile Include="NodeInfo.cs" />
     <Compile Include="PrivateForInterceptor.cs" />
     <Compile Include="PrivateTransactionInput.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="QuorumMakeBlock.cs" />
     <Compile Include="QuorumNodeInfo.cs" />
     <Compile Include="QuorumPauseBlockMaker.cs" />
+    <Compile Include="QuorumPrivateContractTests.cs" />
     <Compile Include="QuorumResumeBlockMaker.cs" />
     <Compile Include="QuorumVote.cs" />
     <Compile Include="Web3.cs" />
