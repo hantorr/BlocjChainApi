@@ -1,7 +1,10 @@
 ﻿using BlockChainFront.Models;
+using ConexionBC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,10 +15,16 @@ namespace BlockChainFront.Controllers
         // GET: Banco
         public ActionResult Index()
         {
+            QuorumPrivateContractTests test = new QuorumPrivateContractTests();
+
+            Task<int> getStringTask = test.ShouldBeAbleToConnectTo7NodesPrivate();
+
             SaldoModel saldo = new SaldoModel();
             saldo.IdBC = "DFGHJK";
             saldo.Banco = "Finandina";
             saldo.Saldo = 23456;
+
+
 
             return View(saldo);
         }
