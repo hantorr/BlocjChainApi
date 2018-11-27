@@ -5,11 +5,10 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Common.Logging;
 using Nethereum.JsonRpc.Client;
-using Nethereum.Web3;
 
 namespace ConexionBC
 {
-    public class ConexionBC: Web3
+    public class ConexionBC: Web3.Web3
     {
         public ConexionBC(IClient client) : base(client)
         {

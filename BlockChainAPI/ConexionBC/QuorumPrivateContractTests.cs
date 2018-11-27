@@ -10,7 +10,7 @@ namespace ConexionBC
 {
     public class QuorumPrivateContractTests
     {
-        public async void ShouldBeAbleToConnectTo7NodesPrivate()
+        public async Task<int> ShouldBeAbleToConnectTo7NodesPrivate()
         {
             var ipAddress = DefaultSettings.QuorumIPAddress;
             var node1Port = "30303";
@@ -38,8 +38,7 @@ namespace ConexionBC
             txnHash = await transactionService.SendRequestAndWaitForReceiptAsync(() => functionSet.SendTransactionAsync(account, 42));
 
             //node1
-            node1Value = await GetValue(abi, address, urlNode1);
-
+            return node1Value = await GetValue(abi, address, urlNode1);
 
             //private.set(4,{from:eth.coinbase,privateFor:["ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc="]});
         }
@@ -47,7 +46,7 @@ namespace ConexionBC
         private static async Task<int> GetValue(string abi, string address, string nodeUrl)
         {
             //normal geth is ok
-            var web3 = new Web3(nodeUrl);
+            var web3 = new Web3.Web3(nodeUrl);
             var contract = web3.Eth.GetContract(abi, address);
             var functionGet = contract.GetFunction("get");
             return await functionGet.CallAsync<int>();

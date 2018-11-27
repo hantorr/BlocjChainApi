@@ -13,7 +13,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConexionBC
+namespace Web3
 {
     public class Web3
     {
@@ -48,8 +48,8 @@ namespace ConexionBC
 
         public ITransactionManager TransactionManager
         {
-            get => Eth.TransactionManager;
-            set => Eth.TransactionManager = value;
+            get { return Eth.TransactionManager; }
+            set { Eth.TransactionManager = value; }
         }
 
         public static UnitConversion Convert { get; } = new UnitConversion();
