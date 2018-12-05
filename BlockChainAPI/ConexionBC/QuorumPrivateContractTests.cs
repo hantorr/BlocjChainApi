@@ -13,7 +13,7 @@ namespace ConexionBC
         public async Task<int> ShouldBeAbleToConnectTo7NodesPrivate()
         {
             var ipAddress = DefaultSettings.QuorumIPAddress;
-            var node1Port = "30303";
+            var node1Port = "8545";
             var urlNode1 = ipAddress + ":" + node1Port;
 
             var address = "0x274ab43196161928d04143cb6ee56429bbc38da1";

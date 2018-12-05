@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Common.Logging;
 using Nethereum.JsonRpc.Client;
+using Nethereum.Web3;
 
 namespace ConexionBC
 {
@@ -15,10 +16,17 @@ namespace ConexionBC
 
         }
 
-        public ConexionBC(string url = @"http://localhost:8545/", ILog log = null, AuthenticationHeaderValue authenticationHeader = null) : base(url, log, authenticationHeader)
+        //public ConexionBC(string url = @"http://localhost:8545/", ILog log = null, AuthenticationHeaderValue authenticationHeader = null) : base(url, log, authenticationHeader)
+        //{
+
+        //}
+
+        public ConexionBC(string url = @"http://localhost:8545/") : base(url)
         {
 
         }
+
+
 
         protected override void InitialiseInnerServices()
         {

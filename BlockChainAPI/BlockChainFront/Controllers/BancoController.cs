@@ -19,10 +19,12 @@ namespace BlockChainFront.Controllers
 
             Task<int> getStringTask = test.ShouldBeAbleToConnectTo7NodesPrivate();
 
-            SaldoModel saldo = new SaldoModel();
-            saldo.IdBC = "DFGHJK";
-            saldo.Banco = "Finandina";
-            saldo.Saldo = 23456;
+            SaldoModel saldo = new SaldoModel
+            {
+                IdBC = "DFGHJK",
+                Banco = "Finandina",
+                Saldo = 23456
+            };
 
 
 
